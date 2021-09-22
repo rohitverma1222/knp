@@ -3,9 +3,9 @@ from django.db import models
 # Create your models here.
 class Gallery(models.Model):
     Event_Name=models.TextField()
-    Image1= models.ImageField(upload_to='pics')
-    Image2= models.ImageField(upload_to='pics')
-    Image3= models.ImageField(upload_to='pics')
+    Image1= models.ImageField(upload_to='media')
+    Image2= models.ImageField(upload_to='media')
+    Image3= models.ImageField(upload_to='media')
     Image4= models.ImageField(upload_to='pics')
     Image5= models.ImageField(upload_to='pics')
     Image6= models.ImageField(upload_to='pics')
@@ -38,5 +38,5 @@ class Courses(models.Model):
 class Teachers(models.Model):
     Teacher_name=models.TextField()
     description_of_teacher=models.TextField()
-    photo=models.ImageField(upload_to='pics',null='true')
+    photo=models.ImageField(upload_to='media',null='true')
     Education=models.TextField()
