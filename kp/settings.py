@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -58,7 +57,7 @@ ROOT_URLCONF = 'kp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['university'],
+        'DIRS': ['Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,9 +127,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS=[
-    os.path.join(BASE_DIR,'university')
+    os.path.join(BASE_DIR,'Templates')
 ]
-STATIC_ROOT=os.path.join(BASE_DIR,'template')
+STATIC_ROOT=os.path.join(BASE_DIR,'assests')
 # django_heroku.settings(locals())
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
