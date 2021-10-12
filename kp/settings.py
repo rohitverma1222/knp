@@ -78,13 +78,17 @@ WSGI_APPLICATION = 'kp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dbqr4fjicnn9fe',
-        'USER':'bgssagyzmlriyn',
-        'PASSWORD':'4287dd7541bd7a5364fc1ace68a4401059fe4b2ac3cb8ab6e1a5b27d994c0505',
-        'HOST':'ec2-44-194-6-121.compute-1.amazonaws.com',
-        'Port':'5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'dbqr4fjicnn9fe',
+    #     'USER':'bgssagyzmlriyn',
+    #     'PASSWORD':'4287dd7541bd7a5364fc1ace68a4401059fe4b2ac3cb8ab6e1a5b27d994c0505',
+    #     'HOST':'ec2-44-194-6-121.compute-1.amazonaws.com',
+    #     'Port':'5432'
+    # }
 }
 
 
